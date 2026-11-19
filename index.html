@@ -23,6 +23,9 @@
       --nota-rotulo: #7a5200;
       --erro-fundo: #fdecec;
       --erro-texto: #8a1c1c;
+      --teste-fundo: #f3e8ff;
+      --teste-borda: #c4b5fd;
+      --teste-texto: #5b21b6;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -41,6 +44,9 @@
         --nota-rotulo: #f0c674;
         --erro-fundo: #3a1717;
         --erro-texto: #ffb4b4;
+        --teste-fundo: #2a1d3d;
+        --teste-borda: #7c5bb0;
+        --teste-texto: #d8b4fe;
       }
     }
 
@@ -135,6 +141,17 @@
     .nota { padding: .5rem .75rem; border-left: 3px solid var(--nota-borda); border-radius: .375rem; background: var(--nota-fundo); }
     .nota-rotulo { margin: 0; font-size: .75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--nota-rotulo); }
     .nota-texto { margin: .125rem 0 0; }
+    .selo-teste {
+      align-self: flex-start;
+      margin: 0;
+      padding: .125rem .625rem;
+      border: 1px solid var(--teste-borda);
+      border-radius: 999px;
+      background: var(--teste-fundo);
+      color: var(--teste-texto);
+      font-size: .8125rem;
+      font-weight: 600;
+    }
     .voz audio { display: block; width: 100%; margin-top: auto; }
     .sem-amostra {
       margin: auto 0 0;
@@ -230,6 +247,7 @@
       const ESCALA_MINIMA = 4;
       const GENEROS = { F: 'Feminina', M: 'Masculina' };
       const SEM_AMOSTRA = 'Amostra indisponível no momento.';
+      const ENDERECO_DA_LISTA = new URL('vozes.json', document.baseURI).href;
 
       const pegar = (id) => document.getElementById(id);
       const estado = pegar('estado');
@@ -256,12 +274,13 @@
         return /^\$+$/.test(s) ? s.length : 0;
       }
 
+      // O contrato dá o caminho relativo à pasta do vozes.json.
       // Só aceita amostras do próprio site: nada de recurso de terceiros.
       function enderecoDaAmostra(caminho) {
         const c = texto(caminho);
         if (!c) return null;
         try {
-          const url = new URL(c, document.baseURI);
+          const url = new URL(c, ENDERECO_DA_LISTA);
           return url.origin === location.origin ? url.href : null;
         } catch {
           return null;
@@ -310,6 +329,7 @@
           topo.append(criarCifroes(cifroes, Math.max(escala, cifroes), infoGrupo ? infoGrupo.rotulo : ''));
         }
         li.append(topo);
+        if (voz.em_teste === true) li.append(criar('p', 'selo-teste', 'Em fase de teste'));
 
         const detalhes = [texto(voz.familia), GENEROS[genero] || texto(voz.genero)].filter(Boolean);
         const provedor = texto(voz.provedor);
@@ -453,7 +473,7 @@
         mostrarEstado('Carregando as vozes…');
         let dados;
         try {
-          const resposta = await fetch('vozes.json', { cache: 'no-cache' });
+          const resposta = await fetch(ENDERECO_DA_LISTA, { cache: 'no-cache' });
           if (!resposta.ok) throw new Error(`HTTP ${resposta.status}`);
           dados = await resposta.json();
         } catch {

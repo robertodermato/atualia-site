@@ -23,6 +23,11 @@
       "grupo": "gemini_pro",
       "rotulo": "Gemini Pro",
       "cifroes": "$$$$"
+    },
+    {
+      "grupo": "teste",
+      "rotulo": "Só para teste",
+      "cifroes": "$$$$$"
     }
   ],
   "vozes": [
@@ -36,6 +41,7 @@
       "grupo": "economica",
       "cifroes": "$",
       "nota_curador": null,
+      "em_teste": false,
       "amostra": "amostras/37.mp3"
     },
     {
@@ -48,6 +54,7 @@
       "grupo": "intermediaria",
       "cifroes": "$$",
       "nota_curador": "Voz feminina sensual.",
+      "em_teste": false,
       "amostra": "amostras/51.mp3"
     },
     {
@@ -60,6 +67,7 @@
       "grupo": "chirp",
       "cifroes": "$$$",
       "nota_curador": null,
+      "em_teste": false,
       "amostra": "amostras/1.mp3"
     },
     {
@@ -72,7 +80,21 @@
       "grupo": "gemini_pro",
       "cifroes": "$$$$",
       "nota_curador": "Voz feminina boa.",
+      "em_teste": false,
       "amostra": "amostras/59.mp3"
+    },
+    {
+      "id": 90,
+      "rotulo": "Voz de teste",
+      "familia": "ElevenLabs",
+      "provedor": "elevenlabs",
+      "genero": "F",
+      "idioma": "pt-BR",
+      "grupo": "teste",
+      "cifroes": "$$$$$",
+      "nota_curador": null,
+      "em_teste": true,
+      "amostra": "amostras/90.mp3"
     }
   ]
 }

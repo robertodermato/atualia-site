@@ -1,10 +1,12 @@
 # atualia-site
 
-Site estático do Atualia, o bot de artigos médicos no Telegram. Fica no GitHub Pages, no domínio atualia.com.br. Quem decide o conteúdo e o visual é o Roberto, dermatologista e dono do projeto; ele não é programador de front-end, então explique cada passo antes de rodar comando, em português.
+Site estático do Atualia, o bot de artigos médicos no Telegram. Fica no GitHub Pages, em vozes.atualia.com.br (sem o domínio, em robertodermato.github.io/atualia-site). Quem decide o conteúdo e o visual é o Roberto, dermatologista e dono do projeto; ele não é programador de front-end, então explique cada passo antes de rodar comando, em português.
 
 ## O que existe
 
-- `vozes/` - a página das vozes (atualia.com.br/vozes): a amostra de cada voz ativa do bot, com o mesmo trecho, a família, o gênero, o custo em cifrões e a nota do curador.
+- `index.html` - a página das vozes: a amostra de cada voz ativa do bot, com o mesmo trecho, a família, o gênero, o custo em cifrões, a nota do curador e o selo das vozes em fase de teste.
+- `vozes.json` e `amostras/` - os dados que o bot grava, na raiz, junto da página.
+- `_config.yml` - deixa o CLAUDE.md fora do site publicado.
 
 ## Regras do site
 
@@ -16,9 +18,9 @@ Site estático do Atualia, o bot de artigos médicos no Telegram. Fica no GitHub
 
 ## O que o bot escreve - nunca editar à mão
 
-- `vozes/vozes.json` e `vozes/amostras/*.mp3` são gravados pelo bot artigos, pela API do GitHub, numa rodada diária e quando uma voz muda. Edição à mão nesses arquivos some na rodada seguinte.
-- O bot faz commits neste repositório. Antes de mudar qualquer coisa, rode `git pull`; antes de publicar, `git pull` de novo.
-- Enquanto o bot não publica a primeira lista, `vozes/vozes.json` é um exemplo, marcado com `"exemplo": true`.
+- `vozes.json` e `amostras/*.mp3`, na raiz do repositório, são gravados pelo bot artigos, pela API do GitHub, numa rodada diária e quando uma voz muda. Edição à mão nesses arquivos some na rodada seguinte.
+- O bot faz commits neste repositório, e o GitHub também (o do `CNAME`). Antes de mudar qualquer coisa, rode `git pull`; antes de publicar, `git pull` de novo.
+- Enquanto o bot não publica a primeira lista, `vozes.json` é um exemplo, marcado com `"exemplo": true`.
 
 ## O contrato do vozes.json (versão 1)
 
@@ -42,6 +44,7 @@ Site estático do Atualia, o bot de artigos médicos no Telegram. Fica no GitHub
       "grupo": "economica",
       "cifroes": "$",
       "nota_curador": null,
+      "em_teste": false,
       "amostra": "amostras/37.mp3"
     }
   ]
@@ -52,28 +55,32 @@ Site estático do Atualia, o bot de artigos médicos no Telegram. Fica no GitHub
 - `exemplo`: só no arquivo de exemplo; com ele verdadeiro, a página mostra um aviso discreto de que os dados são de exemplo.
 - `gerado_em`: quando o bot gerou a lista, com fuso.
 - `texto_amostra`: o trecho que todas as vozes narram; a página o mostra uma vez, acima das vozes.
-- `grupos`: os grupos de custo, já em ordem do mais barato para o mais caro; `cifroes` vai de `$` a `$$$$`. Quanto mais cifrões, mais créditos o áudio gasta. A legenda dos cifrões sai daqui.
+- `grupos`: os grupos de custo, já em ordem do mais barato para o mais caro; `cifroes` vai de `$` a `$$$$$`. Quanto mais cifrões, mais créditos o áudio gasta. A legenda dos cifrões sai daqui.
 - `vozes`: só as vozes ativas, na ordem em que a página deve mostrar.
   - `rotulo`: o nome da voz para quem lê.
   - `familia`: a família da voz (Standard, Chirp 3, Gemini Pro, Fish Audio...).
   - `provedor`: a chave técnica do provedor; mostrar pequeno, ou não mostrar.
   - `genero`: `F` ou `M`.
   - `nota_curador`: a nota do curador, ou `null`; quando houver, aparece marcada como nota do curador.
-  - `amostra`: o caminho do MP3, relativo à pasta `vozes/`.
+  - `em_teste`: `true` para as vozes do grupo de custo "Só para teste" (`teste`), `false` para as outras. Com ele verdadeiro, o cartão mostra o selo "Em fase de teste"; os filtros valem para essas vozes como para as outras.
+  - `amostra`: o caminho do MP3, relativo à raiz do repositório, onde fica o `vozes.json` (por exemplo, `amostras/37.mp3`).
 
 ## A página das vozes
 
-- Lê `vozes.json` da própria pasta, com caminho relativo.
-- Um cartão por voz, na ordem do arquivo: rótulo, família, gênero, cifrões, a nota do curador quando houver, e o player da amostra com `preload="none"`.
+- Fica na raiz, junto do `vozes.json` e da pasta `amostras/`. Usa só caminhos relativos, sem barra no começo, para funcionar em vozes.atualia.com.br e em robertodermato.github.io/atualia-site.
+- Um cartão por voz, na ordem do arquivo: rótulo, família, gênero, cifrões, o selo "Em fase de teste" quando `em_teste` for verdadeiro, a nota do curador quando houver, e o player da amostra com `preload="none"`.
 - Mostra o trecho da amostra e a legenda dos cifrões.
-- Filtros simples por gênero e por grupo de custo.
+- Filtros simples por gênero e por grupo de custo; as vozes de teste entram neles como as outras.
 - Se o JSON não carregar, ou se um MP3 não existir, uma mensagem curta no lugar, sem quebrar a página.
 - Para ver no computador, a página precisa de um servidor local: o navegador bloqueia a leitura do JSON aberta direto do arquivo. Use o que já existir na máquina antes de instalar qualquer coisa, e pergunte ao Roberto antes de instalar.
 
 ## Publicação
 
-- Repositório no GitHub, publicado pelo GitHub Pages a partir da branch `main`, pasta raiz.
-- Domínio atualia.com.br: arquivo `CNAME` na raiz com `atualia.com.br`, e o DNS no registro.br apontando para o GitHub Pages. Confira na documentação atual do GitHub os registros de DNS antes de passar ao Roberto.
+- Repositório `github.com/robertodermato/atualia-site` (público), publicado pelo GitHub Pages a partir da branch `main`, pasta raiz.
+- A página fica em vozes.atualia.com.br e, sem o domínio, em robertodermato.github.io/atualia-site.
+- O arquivo `CNAME` quem cria é o GitHub, quando o Roberto põe o domínio nas configurações do Pages; por isso o `git pull` vem antes de qualquer mudança. Nunca crie o `CNAME` à mão.
+- atualia.com.br, www.atualia.com.br, atualia.app e www.atualia.app são do web app Atualia, na VPS de sites, e nunca apontam para o GitHub Pages.
+- O DNS fica no Cloudflare, aos cuidados do chat de infra (inclusive o registro de vozes.atualia.com.br), e este repositório não mexe nele.
 - O bot escreve no repositório com um token que só tem acesso a ele; o token não fica neste repositório.
 
 ## De onde vêm as mudanças
