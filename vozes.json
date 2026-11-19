@@ -1,12 +1,77 @@
 {
     "vozes": [
         {
+            "id": 41,
+            "grupo": "economica",
+            "genero": "F",
+            "idioma": "pt-BR",
+            "rotulo": "Dora",
+            "amostra": "amostras/41.mp3",
+            "cifroes": "$",
+            "familia": "Kokoro",
+            "em_teste": true,
+            "provedor": "openai_compat",
+            "nota_curador": null
+        },
+        {
+            "id": 42,
+            "grupo": "economica",
+            "genero": "M",
+            "idioma": "pt-BR",
+            "rotulo": "Alex",
+            "amostra": "amostras/42.mp3",
+            "cifroes": "$",
+            "familia": "Kokoro",
+            "em_teste": true,
+            "provedor": "openai_compat",
+            "nota_curador": null
+        },
+        {
             "id": 37,
             "grupo": "economica",
             "genero": "M",
             "idioma": "pt-BR",
             "rotulo": "Standard-B",
             "amostra": "amostras/37.mp3",
+            "cifroes": "$",
+            "familia": "Standard",
+            "em_teste": false,
+            "provedor": "google",
+            "nota_curador": null
+        },
+        {
+            "id": 38,
+            "grupo": "economica",
+            "genero": "F",
+            "idioma": "pt-BR",
+            "rotulo": "Standard-C",
+            "amostra": "amostras/38.mp3",
+            "cifroes": "$",
+            "familia": "Standard",
+            "em_teste": false,
+            "provedor": "google",
+            "nota_curador": null
+        },
+        {
+            "id": 39,
+            "grupo": "economica",
+            "genero": "F",
+            "idioma": "pt-BR",
+            "rotulo": "Standard-D",
+            "amostra": "amostras/39.mp3",
+            "cifroes": "$",
+            "familia": "Standard",
+            "em_teste": false,
+            "provedor": "google",
+            "nota_curador": null
+        },
+        {
+            "id": 40,
+            "grupo": "economica",
+            "genero": "M",
+            "idioma": "pt-BR",
+            "rotulo": "Standard-E",
+            "amostra": "amostras/40.mp3",
             "cifroes": "$",
             "familia": "Standard",
             "em_teste": false,
@@ -27,19 +92,6 @@
             "nota_curador": null
         },
         {
-            "id": 38,
-            "grupo": "economica",
-            "genero": "F",
-            "idioma": "pt-BR",
-            "rotulo": "Standard-C",
-            "amostra": "amostras/38.mp3",
-            "cifroes": "$",
-            "familia": "Standard",
-            "em_teste": false,
-            "provedor": "google",
-            "nota_curador": null
-        },
-        {
             "id": 33,
             "grupo": "economica",
             "genero": "M",
@@ -53,19 +105,6 @@
             "nota_curador": null
         },
         {
-            "id": 39,
-            "grupo": "economica",
-            "genero": "F",
-            "idioma": "pt-BR",
-            "rotulo": "Standard-D",
-            "amostra": "amostras/39.mp3",
-            "cifroes": "$",
-            "familia": "Standard",
-            "em_teste": false,
-            "provedor": "google",
-            "nota_curador": null
-        },
-        {
             "id": 34,
             "grupo": "economica",
             "genero": "F",
@@ -74,19 +113,6 @@
             "amostra": "amostras/34.mp3",
             "cifroes": "$",
             "familia": "WaveNet",
-            "em_teste": false,
-            "provedor": "google",
-            "nota_curador": null
-        },
-        {
-            "id": 40,
-            "grupo": "economica",
-            "genero": "M",
-            "idioma": "pt-BR",
-            "rotulo": "Standard-E",
-            "amostra": "amostras/40.mp3",
-            "cifroes": "$",
-            "familia": "Standard",
             "em_teste": false,
             "provedor": "google",
             "nota_curador": null
@@ -113,32 +139,6 @@
             "amostra": "amostras/36.mp3",
             "cifroes": "$",
             "familia": "WaveNet",
-            "em_teste": false,
-            "provedor": "google",
-            "nota_curador": null
-        },
-        {
-            "id": 30,
-            "grupo": "intermediaria",
-            "genero": "M",
-            "idioma": "pt-BR",
-            "rotulo": "Neural2-B",
-            "amostra": "amostras/30.mp3",
-            "cifroes": "$$",
-            "familia": "Neural2",
-            "em_teste": false,
-            "provedor": "google",
-            "nota_curador": null
-        },
-        {
-            "id": 31,
-            "grupo": "intermediaria",
-            "genero": "F",
-            "idioma": "pt-BR",
-            "rotulo": "Neural2-C",
-            "amostra": "amostras/31.mp3",
-            "cifroes": "$$",
-            "familia": "Neural2",
             "em_teste": false,
             "provedor": "google",
             "nota_curador": null
@@ -183,6 +183,58 @@
             "nota_curador": "Voz masculina muito usada em memes da internet."
         },
         {
+            "id": 57,
+            "grupo": "intermediaria",
+            "genero": "F",
+            "idioma": "pt-BR",
+            "rotulo": "Kore",
+            "amostra": "amostras/57.mp3",
+            "cifroes": "$$",
+            "familia": "Gemini Flash",
+            "em_teste": false,
+            "provedor": "gemini",
+            "nota_curador": "Voz feminina excelente e bastante expressiva."
+        },
+        {
+            "id": 58,
+            "grupo": "intermediaria",
+            "genero": "M",
+            "idioma": "pt-BR",
+            "rotulo": "Charon",
+            "amostra": "amostras/58.mp3",
+            "cifroes": "$$",
+            "familia": "Gemini Flash",
+            "em_teste": false,
+            "provedor": "gemini",
+            "nota_curador": "Voz masculina excelente e bastante expressiva."
+        },
+        {
+            "id": 30,
+            "grupo": "intermediaria",
+            "genero": "M",
+            "idioma": "pt-BR",
+            "rotulo": "Neural2-B",
+            "amostra": "amostras/30.mp3",
+            "cifroes": "$$",
+            "familia": "Neural2",
+            "em_teste": false,
+            "provedor": "google",
+            "nota_curador": null
+        },
+        {
+            "id": 31,
+            "grupo": "intermediaria",
+            "genero": "F",
+            "idioma": "pt-BR",
+            "rotulo": "Neural2-C",
+            "amostra": "amostras/31.mp3",
+            "cifroes": "$$",
+            "familia": "Neural2",
+            "em_teste": false,
+            "provedor": "google",
+            "nota_curador": null
+        },
+        {
             "id": 54,
             "grupo": "intermediaria",
             "genero": "M",
@@ -220,32 +272,6 @@
             "em_teste": false,
             "provedor": "openai",
             "nota_curador": null
-        },
-        {
-            "id": 57,
-            "grupo": "intermediaria",
-            "genero": "F",
-            "idioma": "pt-BR",
-            "rotulo": "Kore",
-            "amostra": "amostras/57.mp3",
-            "cifroes": "$$",
-            "familia": "Gemini Flash",
-            "em_teste": false,
-            "provedor": "gemini",
-            "nota_curador": "Voz feminina excelente e bastante expressiva."
-        },
-        {
-            "id": 58,
-            "grupo": "intermediaria",
-            "genero": "M",
-            "idioma": "pt-BR",
-            "rotulo": "Charon",
-            "amostra": "amostras/58.mp3",
-            "cifroes": "$$",
-            "familia": "Gemini Flash",
-            "em_teste": false,
-            "provedor": "gemini",
-            "nota_curador": "Voz masculina excelente e bastante expressiva."
         },
         {
             "id": 1,
@@ -638,29 +664,42 @@
             "nota_curador": "Voz feminina boa."
         },
         {
-            "id": 41,
-            "grupo": "teste",
-            "genero": "F",
-            "idioma": "pt-BR",
-            "rotulo": "Dora",
-            "amostra": "amostras/41.mp3",
-            "cifroes": "$$$$$",
-            "familia": "Kokoro",
-            "em_teste": true,
-            "provedor": "openai_compat",
-            "nota_curador": null
-        },
-        {
-            "id": 42,
+            "id": 48,
             "grupo": "teste",
             "genero": "M",
             "idioma": "pt-BR",
-            "rotulo": "Alex",
-            "amostra": "amostras/42.mp3",
+            "rotulo": "Rafael",
+            "amostra": "amostras/48.mp3",
             "cifroes": "$$$$$",
-            "familia": "Kokoro",
+            "familia": "Cartesia",
             "em_teste": true,
-            "provedor": "openai_compat",
+            "provedor": "cartesia",
+            "nota_curador": null
+        },
+        {
+            "id": 49,
+            "grupo": "teste",
+            "genero": "F",
+            "idioma": "pt-BR",
+            "rotulo": "Isabella",
+            "amostra": "amostras/49.mp3",
+            "cifroes": "$$$$$",
+            "familia": "Cartesia",
+            "em_teste": true,
+            "provedor": "cartesia",
+            "nota_curador": null
+        },
+        {
+            "id": 50,
+            "grupo": "teste",
+            "genero": "F",
+            "idioma": "pt-BR",
+            "rotulo": "Helena",
+            "amostra": "amostras/50.mp3",
+            "cifroes": "$$$$$",
+            "familia": "Cartesia",
+            "em_teste": true,
+            "provedor": "cartesia",
             "nota_curador": null
         },
         {
@@ -714,76 +753,37 @@
             "em_teste": true,
             "provedor": "elevenlabs",
             "nota_curador": null
-        },
-        {
-            "id": 48,
-            "grupo": "teste",
-            "genero": "M",
-            "idioma": "pt-BR",
-            "rotulo": "Rafael",
-            "amostra": "amostras/48.mp3",
-            "cifroes": "$$$$$",
-            "familia": "Cartesia",
-            "em_teste": true,
-            "provedor": "cartesia",
-            "nota_curador": null
-        },
-        {
-            "id": 49,
-            "grupo": "teste",
-            "genero": "F",
-            "idioma": "pt-BR",
-            "rotulo": "Isabella",
-            "amostra": "amostras/49.mp3",
-            "cifroes": "$$$$$",
-            "familia": "Cartesia",
-            "em_teste": true,
-            "provedor": "cartesia",
-            "nota_curador": null
-        },
-        {
-            "id": 50,
-            "grupo": "teste",
-            "genero": "F",
-            "idioma": "pt-BR",
-            "rotulo": "Helena",
-            "amostra": "amostras/50.mp3",
-            "cifroes": "$$$$$",
-            "familia": "Cartesia",
-            "em_teste": true,
-            "provedor": "cartesia",
-            "nota_curador": null
         }
     ],
     "grupos": [
         {
             "grupo": "economica",
-            "rotulo": "Econômica",
+            "rotulo": "Muito econômica",
             "cifroes": "$"
         },
         {
             "grupo": "intermediaria",
-            "rotulo": "Intermediária",
+            "rotulo": "Econômica",
             "cifroes": "$$"
         },
         {
             "grupo": "chirp",
-            "rotulo": "Chirp 3 HD",
+            "rotulo": "Intermediária",
             "cifroes": "$$$"
         },
         {
             "grupo": "gemini_pro",
-            "rotulo": "Gemini Pro",
+            "rotulo": "Cara",
             "cifroes": "$$$$"
         },
         {
             "grupo": "teste",
-            "rotulo": "Só para teste",
+            "rotulo": "Muito cara",
             "cifroes": "$$$$$"
         }
     ],
     "versao": 1,
     "exemplo": false,
-    "gerado_em": "2026-11-19T16:58:46-03:00",
+    "gerado_em": "2026-11-19T18:14:49-03:00",
     "texto_amostra": "Olá, colega! Nesse artigo sobre psoríase em placas, o risanquizumabe levou 82% dos pacientes ao PASI 90 na semana 16, e o primary endpoint foi alcançado. Não houve hepatotoxicidade, e o LDL ficou estável em 98 mg/dL, segundo o New England Journal of Medicine."
 }
