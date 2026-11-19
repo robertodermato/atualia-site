@@ -1,0 +1,78 @@
+{
+  "versao": 1,
+  "exemplo": true,
+  "gerado_em": "2026-11-19T12:00:00-03:00",
+  "texto_amostra": "Olá, colega! Nesse artigo sobre psoríase em placas, o risanquizumabe levou 82% dos pacientes ao PASI 90 na semana 16, e o primary endpoint foi alcançado. Não houve hepatotoxicidade, e o LDL ficou estável em 98 mg/dL, segundo o New England Journal of Medicine.",
+  "grupos": [
+    {
+      "grupo": "economica",
+      "rotulo": "Econômica",
+      "cifroes": "$"
+    },
+    {
+      "grupo": "intermediaria",
+      "rotulo": "Intermediária",
+      "cifroes": "$$"
+    },
+    {
+      "grupo": "chirp",
+      "rotulo": "Chirp 3 HD",
+      "cifroes": "$$$"
+    },
+    {
+      "grupo": "gemini_pro",
+      "rotulo": "Gemini Pro",
+      "cifroes": "$$$$"
+    }
+  ],
+  "vozes": [
+    {
+      "id": 37,
+      "rotulo": "Standard-B",
+      "familia": "Standard",
+      "provedor": "google",
+      "genero": "M",
+      "idioma": "pt-BR",
+      "grupo": "economica",
+      "cifroes": "$",
+      "nota_curador": null,
+      "amostra": "amostras/37.mp3"
+    },
+    {
+      "id": 51,
+      "rotulo": "Isabela",
+      "familia": "Fish Audio",
+      "provedor": "fish",
+      "genero": "F",
+      "idioma": "pt-BR",
+      "grupo": "intermediaria",
+      "cifroes": "$$",
+      "nota_curador": "Voz feminina sensual.",
+      "amostra": "amostras/51.mp3"
+    },
+    {
+      "id": 1,
+      "rotulo": "Achernar",
+      "familia": "Chirp 3",
+      "provedor": "google",
+      "genero": "F",
+      "idioma": "pt-BR",
+      "grupo": "chirp",
+      "cifroes": "$$$",
+      "nota_curador": null,
+      "amostra": "amostras/1.mp3"
+    },
+    {
+      "id": 59,
+      "rotulo": "Kore",
+      "familia": "Gemini Pro",
+      "provedor": "gemini",
+      "genero": "F",
+      "idioma": "pt-BR",
+      "grupo": "gemini_pro",
+      "cifroes": "$$$$",
+      "nota_curador": "Voz feminina boa.",
+      "amostra": "amostras/59.mp3"
+    }
+  ]
+}
