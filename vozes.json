@@ -651,19 +651,6 @@
             "nota_curador": null
         },
         {
-            "id": 59,
-            "grupo": "gemini_pro",
-            "genero": "F",
-            "idioma": "pt-BR",
-            "rotulo": "Kore",
-            "amostra": "amostras/59.mp3",
-            "cifroes": "$$$$",
-            "familia": "Gemini Pro",
-            "em_teste": false,
-            "provedor": "gemini",
-            "nota_curador": "Voz feminina boa."
-        },
-        {
             "id": 48,
             "grupo": "teste",
             "genero": "M",
@@ -772,11 +759,6 @@
             "cifroes": "$$$"
         },
         {
-            "grupo": "gemini_pro",
-            "rotulo": "Cara",
-            "cifroes": "$$$$"
-        },
-        {
             "grupo": "teste",
             "rotulo": "Muito cara",
             "cifroes": "$$$$$"
@@ -784,6 +766,6 @@
     ],
     "versao": 1,
     "exemplo": false,
-    "gerado_em": "2026-11-19T18:14:49-03:00",
+    "gerado_em": "2026-11-19T18:27:48-03:00",
     "texto_amostra": "Olá, colega! Nesse artigo sobre psoríase em placas, o risanquizumabe levou 82% dos pacientes ao PASI 90 na semana 16, e o primary endpoint foi alcançado. Não houve hepatotoxicidade, e o LDL ficou estável em 98 mg/dL, segundo o New England Journal of Medicine."
 }
